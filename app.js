@@ -13,18 +13,20 @@ function Print(){
 	if(ans==0)
 		return
 	else{
-		for(let i=0;i<ans;i++){
-			if(i==0){
-				s+="<ul>"
+		for(let i=1;i<=ans;i++){
+			//if(i==0){
+				s+="<li>"
 				s+="\n"
-			}
-			s+="<li>"
-			s+=(i+1)
+			//}
+			s+="cube("
+			s+=(i)
+			s+=") = "
+			s+=((i)*(i)*(i))
 			s+="</li>"
 			s+="\n"
 		}
-		s+="</ul>"
-		s+="\n"
+		//s+="<li>"
+		//s+="\n"
 	}
 	let curr=document.querySelector("#dis")
 	curr.textContent=s
