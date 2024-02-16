@@ -12,10 +12,12 @@ function Print(){
 		else{
 			s+="<li>"
 			s+="\n"
-			s+="cube("
+			s+="factorial("
 			s+=(x.value)
 			s+=") = "
-			s+=((x.value)*(x.value)*(x.value))
+			var res=factorial(x.value)
+			//s+=((x.value)*(x.value)*(x.value))
+			s+=res
 			s+=" (cached)</li>"
 			s+="\n"
 			}
@@ -27,17 +29,22 @@ function Print(){
 		else{
 			s+="<li>"
 			s+="\n"
-			s+="cube("
+			s+="factorial("
 			s+=(x.value)
 			s+=") = "
-			s+=((x.value)*(x.value)*(x.value))
+			var res=factorial(x.value)
+			//s+=((x.value)*(x.value)*(x.value))
+			s+=res
 			s+=" (new)</li>"
 			s+="\n"
 			}
 		
 		localStorage.setItem(x.value,1)
 	}
-
+	function factorial(n) { 
+		if (n == 0) return 1; 
+		return n * factorial(n - 1); 
+	  } 
 	let curr=document.querySelector("#dis")
 	curr.textContent=s
 }
