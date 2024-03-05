@@ -9,16 +9,14 @@ function Print(){
 	curr.textContent=s
 	return 
 	}
-	s+="<ul>"
-	s+="\n"
 	for(let i=0;i<ans;i++){
-			s+="<li>"
+			s+="<li> cube("
 			s+=(i+1)
+			s+=") = "
+			s+=(i+1)*(i+1)*(i+1)
 			s+="</li>"
 			s+="\n"
 		}
-		s+="</ul>"
-		s+="\n"
 	let curr=document.querySelector("#dis")
 	curr.textContent=s
 }
