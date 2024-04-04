@@ -11,7 +11,6 @@ function Print(event){
 	let s=""
 	let x=document.querySelector("#num")
 	var ans=Number(x.value)
-	console.log(ans)
 	if(ans<=0){
 	document.getElementById("dis").innerHTML = "Cube of Less than or 0 not possible"
 	return
